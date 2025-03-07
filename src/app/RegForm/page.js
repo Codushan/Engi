@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import styles from './page.module.css';
-import NavBar from '../Components/NavBar'
+import NavBar from '../components/NavBar'
 
 const guidelinesList = [
   "Innovative Structural Design: Pushing the Boundaries of Engineering",

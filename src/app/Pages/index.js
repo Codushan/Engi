@@ -9,15 +9,15 @@ import LeaderboardWidget from '../components/LeaderboardWidget';
 import ARPreviewCard from '../components/ARPreviewCard';
 import HolographicCity from '../components/HolographicCity';
 import NetworkingMap from '../components/NetworkingMap';
-import HighlightCard from '../Components/HighlightCard';
-import StatCard from '../Components/StatCard';
-import Footer from '../Components/Footer';
+import HighlightCard from '../components/HighlightCard';
+import StatCard from '../components/StatCard';
+import Footer from '../components/Footer';
 import { FaTrophy, FaCalendarAlt, FaChalkboardTeacher, FaHome, FaUsers, FaMapMarkedAlt, FaMicrophone, FaTools, FaUserFriends } from 'react-icons/fa';
 
 
 // Import styles
 import styles from './index.module.css';
-import Navbar from '../Components/NavBar';
+import Navbar from '../components/NavBar';
 
 const text = "Our Highlights";
 const animatedText = text.split("").map((char, index) => (

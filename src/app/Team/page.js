@@ -2,8 +2,8 @@
 "use client"
 import React, { useState } from 'react';
 import styles from './page.module.css';
-import Navbar from '../Components/NavBar';
-import Footer from '../Components/Footer';
+import Navbar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const OurTeam = () => {
   const [activeTeam, setActiveTeam] = useState('core');
