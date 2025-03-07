@@ -2,7 +2,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Competition = () => {

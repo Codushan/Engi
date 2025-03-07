@@ -17,7 +17,7 @@ import { FaTrophy, FaCalendarAlt, FaChalkboardTeacher, FaHome, FaUsers, FaMapMar
 
 // Import styles
 import styles from './index.module.css';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 
 const text = "Our Highlights";
 const animatedText = text.split("").map((char, index) => (

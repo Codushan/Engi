@@ -5,7 +5,7 @@ import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import styles from './page.module.css';
-import NavBar from '../components/NavBar'
+import Navbar from '../components/Navbar';
 
 const guidelinesList = [
   "Innovative Structural Design: Pushing the Boundaries of Engineering",
@@ -90,7 +90,7 @@ function RegisterForm() {
 
   return (
     <div className={styles.pageContainer}>
-      <NavBar/>
+      <Navbar />
       <div className={styles.backgroundGrid}></div>
       <div className={styles.registrationWrapper}>
         {/* Guidelines Section */}
