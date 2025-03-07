@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from "react";
+import { Suspense } from 'react';
 import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -215,4 +216,13 @@ function RegisterForm() {
   );
 }
 
-export default RegisterForm;
+// This wrapper component handles the Suspense boundary
+function RegFormPage() {
+  return (
+    <Suspense fallback={<div>Loading registration form...</div>}>
+      <RegisterForm />
+    </Suspense>
+  );
+}
+
+export default RegFormPage;

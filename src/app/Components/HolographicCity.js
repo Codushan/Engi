@@ -1,4 +1,3 @@
-// components/HolographicCity.js
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import styles from './HolographicCity.module.css';
@@ -10,15 +9,17 @@ const HolographicCity = () => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    // Store a reference to the current DOM node to use in cleanup
+    const currentMount = mountRef.current;
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    if (mountRef.current.childElementCount > 0) {
-      mountRef.current.removeChild(mountRef.current.childNodes[0]);
+    if (currentMount.childElementCount > 0) {
+      currentMount.removeChild(currentMount.childNodes[0]);
     }
 
-    mountRef.current.appendChild(renderer.domElement);
+    currentMount.appendChild(renderer.domElement);
     camera.position.set(0, 5, 15);
     camera.lookAt(0, 0, 0);
 
@@ -107,7 +108,9 @@ const HolographicCity = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', onMouseMove);
-      mountRef.current?.removeChild(renderer.domElement);
+      if (currentMount) {
+        currentMount.removeChild(renderer.domElement);
+      }
       scene.traverse((object) => {
         if (object instanceof THREE.Mesh) {
           object.geometry.dispose();

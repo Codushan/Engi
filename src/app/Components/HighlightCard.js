@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import { FaTrophy, FaChalkboardTeacher, FaUsers } from 'react-icons/fa';
 import styles from './HighlightCard.module.css';
 
@@ -59,7 +60,13 @@ const HighlightCard = ({
       
       {image && (
         <div className={styles.imageWrapper}>
-          <img src={image.src} alt={image.alt || title} className={styles.image} />
+          <Image 
+  src={image.src} 
+  alt={image.alt || title} 
+  width={500} // Set appropriate width
+  height={300} // Set appropriate height
+  className={styles.image} 
+/>
           
           {featured && (
             <div className={styles.featuredBadge}>
