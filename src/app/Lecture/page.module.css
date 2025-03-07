@@ -1,0 +1,496 @@
+/* styles/Lecture.module.css */
+.lectureContainer {
+    margin-top: 12vh;
+    padding: 2rem;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .spaceBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #050a14 0%, #0a1a2e 100%);
+    z-index: -2;
+    opacity: 0.95;
+  }
+  
+  .spaceBackground:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.05;
+    z-index: -1;
+  }
+  
+  .holographicHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .holographicHeader h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #7af1ff;
+    font-weight: 300;
+  }
+  
+  .featuredSection {
+    margin-bottom: 4rem;
+  }
+  
+  .featuredSection h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .featuredSection h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00e5ff, transparent);
+  }
+  
+  .featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 2rem;
+  }
+  
+  .featuredCard {
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .featuredCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 229, 255, 0.3);
+    border-color: rgba(0, 229, 255, 0.5);
+  }
+  
+  .featuredImageContainer {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* styles/Lecture.module.css (continued) */
+.featuredImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    transition: transform 0.5s ease;
+  }
+  
+  .featuredCard:hover .featuredImage {
+    transform: scale(1.05);
+  }
+  
+  .blueprintOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 1;
+    opacity: 0.3;
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 229, 255, 0.8);
+    color: #050a14;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+  
+  .featuredContent {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featuredContent h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  
+  .speakerInfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .speakerName {
+    color: #00e5ff;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .speakerOrg {
+    color: #7af1ff;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .lectureDescription {
+    color: #b4e1ff;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .lectureDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7af1ff;
+    font-size: 0.9rem;
+  }
+  
+  .detailIcon {
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 229, 255, 0.3);
+    border-radius: 50%;
+  }
+  
+  .attendeeInfo {
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+  }
+  
+  .attendeeBar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .attendeeFill {
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+  
+  .attendeeInfo span {
+    color: #7af1ff;
+    font-size: 0.8rem;
+  }
+  
+  .registerButton {
+    padding: 0.8rem;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    border: none;
+    border-radius: 5px;
+    color: #050a14;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .registerButton:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.6s ease;
+  }
+  
+  .registerButton:hover:before {
+    left: 100%;
+  }
+  
+  .filtersSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filterButton {
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    color: #7af1ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterButton.active, .filterButton:hover {
+    background: rgba(0, 229, 255, 0.2);
+    border-color: rgba(0, 229, 255, 0.7);
+  }
+  
+  .searchContainer {
+    position: relative;
+  }
+  
+  .searchContainer input {
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: #fff;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border-radius: 20px;
+    width: 250px;
+    font-size: 0.9rem;
+  }
+  
+  .searchContainer input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border: 2px solid #00e5ff;
+    border-radius: 50%;
+  }
+  
+  .searchIcon:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -3px;
+    width: 8px;
+    height: 2px;
+    background: #00e5ff;
+    transform: rotate(45deg);
+  }
+  
+  .allLecturesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .lectureCard {
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .lectureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.2);
+    border-color: rgba(0, 229, 255, 0.4);
+  }
+  
+  .lectureImageContainer {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lectureImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .lectureCard:hover .lectureImage {
+    transform: scale(1.05);
+  }
+  
+  .lectureCategory {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #00e5ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+  
+  .lectureCardContent {
+    padding: 1rem;
+  }
+  
+  .lectureCardContent h4 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    height: 2.8rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .cardSpeaker {
+    color: #00e5ff;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .cardDetails {
+    margin-bottom: 1rem;
+  }
+  
+  .cardDetail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7af1ff;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .detailDot {
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 229, 255, 0.5);
+    border-radius: 50%;
+  }
+  
+  .cardActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .detailsButton, .addButton {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .detailsButton {
+    background: transparent;
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    color: #00e5ff;
+  }
+  
+  .addButton {
+    background: rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    color: #00e5ff;
+  }
+  
+  .calendarView {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .calendarButton {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: #00e5ff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .calendarButton:hover {
+    background: rgba(0, 229, 255, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .calendarIcon {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #00e5ff;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .calendarIcon:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    width: 2px;
+    height: 5px;
+    background: #00e5ff;
+    box-shadow: 8px 0 0 #00e5ff;
+  }

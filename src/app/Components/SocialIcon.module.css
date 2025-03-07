@@ -1,0 +1,174 @@
+.socialIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  /* Size variants */
+  .small {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .small .icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .medium {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .medium .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .large {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .large .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Style variants */
+  .default {
+    background-color: transparent;
+    color: var(--text-secondary);
+  }
+  
+  .default:hover {
+    background-color: rgba(var(--text-secondary-rgb), 0.1);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+  }
+  
+  .outlined {
+    background-color: transparent;
+    border: 1.5px solid var(--border-color);
+    color: var(--text-secondary);
+  }
+  
+  .outlined:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+  }
+  
+  .filled {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  
+  .filled:hover {
+    background-color: var(--bg-tertiary);
+    transform: translateY(-2px);
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  
+  /* Colored variants for each platform */
+  .colored.twitter,
+  .colored.x {
+    background-color: rgba(29, 161, 242, 0.1);
+    color: #1da1f2;
+  }
+  
+  .colored.twitter:hover,
+  .colored.x:hover {
+    background-color: #1da1f2;
+    color: white;
+  }
+  
+  .colored.facebook {
+    background-color: rgba(66, 103, 178, 0.1);
+    color: #4267B2;
+  }
+  
+  .colored.facebook:hover {
+    background-color: #4267B2;
+    color: white;
+  }
+  
+  .colored.linkedin {
+    background-color: rgba(0, 119, 181, 0.1);
+    color: #0077B5;
+  }
+  
+  .colored.linkedin:hover {
+    background-color: #0077B5;
+    color: white;
+  }
+  
+  .colored.instagram {
+    background-color: rgba(225, 48, 108, 0.1);
+    color: #E1306C;
+  }
+  
+  .colored.instagram:hover {
+    background-color: #E1306C;
+    color: white;
+  }
+  
+  .colored.github {
+    background-color: rgba(51, 51, 51, 0.1);
+    color: #333;
+  }
+  
+  .colored.github:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  .colored.youtube {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+  }
+  
+  .colored.youtube:hover {
+    background-color: #FF0000;
+    color: white;
+  }
+  
+  /* For when label is shown */
+  .socialIcon.small.label {
+    width: auto;
+    padding: 0 12px;
+    border-radius: 16px;
+  }
+  
+  .socialIcon.medium.label {
+    width: auto;
+    padding: 0 16px;
+    border-radius: 21px;
+  }
+  
+  .socialIcon.large.label {
+    width: auto;
+    padding: 0 20px;
+    border-radius: 28px;
+  }
+  
+  .label {
+    margin-left: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .small .label {
+    font-size: 0.75rem;
+  }
+  
+  .large .label {
+    font-size: 1rem;
+  }

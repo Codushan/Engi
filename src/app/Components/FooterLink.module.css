@@ -1,0 +1,73 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #80b3ff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: #00e5ff;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+
+.externalIcon {
+  margin-left: 0.3rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover .externalIcon {
+  opacity: 1;
+}
+
+.arrowIcon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.link:hover .arrowIcon {
+  transform: translateX(3px);
+}
+
+.text {
+  /* Default text link style */
+}
+
+.highlight {
+  background: rgba(64, 128, 255, 0.2);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(64, 128, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background: rgba(0, 229, 255, 0.2);
+  border-color: rgba(0, 229, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.button {
+  background: linear-gradient(90deg, #4080ff 0%, #00e5ff 100%);
+  color: #ffffff !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.4);
+}

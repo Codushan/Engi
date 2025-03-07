@@ -1,0 +1,44 @@
+/* Components/CountdownTimer.module.css */
+.countdownTimer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .timerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 80px;
+  }
+  
+  .timerDigit {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .timerLabel {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .countdownTimer {
+      gap: 0.5rem;
+    }
+    
+    .timerItem {
+      padding: 0.75rem;
+      min-width: 60px;
+    }
+    
+    .timerDigit {
+      font-size: 1.5rem;
+    }
+  }

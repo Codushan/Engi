@@ -1,0 +1,215 @@
+/* styles/ContactUs.module.css */
+.contactContainer {
+    margin-top: 6vh;
+    background: linear-gradient(180deg, #050718 0%, #0a1026 100%);
+    padding: 4rem 2rem;
+    color: #e0e6ff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .holographicHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .holographicHeader h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(90deg, #4080ff 0%, #00e5ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+  
+  .subtitle {
+    color: #80b3ff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .gridPatterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(64, 128, 255, 0.15) 0%, transparent 70%),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 20px 20px, 20px 20px;
+    z-index: 1;
+    animation: gridPulse 8s infinite alternate;
+  }
+  
+  .contactContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .infoCard {
+    background: rgba(8, 15, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(64, 128, 255, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .infoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.2);
+    border-color: rgba(0, 229, 255, 0.6);
+  }
+  
+  .infoCardIcon {
+    width: 60px;
+    height: 60px;
+    background: rgba(64, 128, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .iconPulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 229, 255, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 0.6; }
+  }
+  
+  .infoCard h3 {
+    font-size: 1.2rem;
+    color: #00e5ff;
+    margin-bottom: 0.8rem;
+  }
+  
+  .infoCard p {
+    color: #d0d8ff;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    line-height: 1.5;
+  }
+  
+  .contactForm {
+    background: rgba(8, 15, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(64, 128, 255, 0.3);
+    border-radius: 10px;
+    padding: 2.5rem;
+    position: relative;
+  }
+  
+  .formHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .formHeader h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formHeader p {
+    color: #80b3ff;
+    font-size: 1rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #80b3ff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .formGroup.active label {
+    color: #00e5ff;
+  }
+  
+  .formGroup input, 
+  .formGroup select, 
+  .formGroup textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(16, 30, 80, 0.6);
+    border: 1px solid rgba(64, 128, 255, 0.3);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .formGroup.active input, 
+  .formGroup.active select, 
+  .formGroup.active textarea {
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  }
+  
+  .formGroup input:focus, 
+  .formGroup select:focus, 
+  .formGroup textarea:focus {
+    outline: none;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 1rem;
+    background: #4080ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  
+  .submitButton:hover {
+    background: #00e5ff;
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  /* Rest of the CSS will include styles for AI Assistant, Interactive Map, Form Submission, etc. */
+  /* (The remaining styles would follow a similar futuristic, neon-tech theme) */

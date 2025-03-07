@@ -1,0 +1,408 @@
+/* styles/Workshop.module.css */
+.workshopContainer {
+    margin-top: 12vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #050a14 0%, #0a1a2e 100%);
+    /* min-height: 100vh; */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .holographicHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  
+  .holographicHeader h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .gridPatterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #7af1ff;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .workshopGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .workshopCard {
+    background: rgba(16, 23, 41, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .workshopCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 229, 255, 0.5);
+    border-color: rgba(0, 229, 255, 0.7);
+  }
+  
+  .hologramContainer {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hologramImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+  }
+  
+  .blueprintOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgba(0, 229, 255, 0.15) 50%, transparent 60%);
+    animation: scanEffect 4s linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes scanEffect {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .arBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 229, 255, 0.8);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    animation: pulsate 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulsate {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+  }
+  
+  .workshopContent {
+    padding: 1.5rem;
+  }
+  
+  .workshopContent h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .workshopDetails {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .dateTime, .instructor {
+    color: #7af1ff;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .description {
+    color: #b4e1ff;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .capacityContainer {
+    margin-bottom: 1.5rem;
+  }
+  
+  .capacityBar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .capacityFill {
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+  
+  .capacityText {
+    color: #7af1ff;
+    font-size: 0.8rem;
+  }
+  
+  .registerButton {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(90deg, #00e5ff, #2979ff);
+    border: none;
+    border-radius: 5px;
+    color: #050a14;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .registerButton:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.6s ease;
+  }
+  
+  .registerButton:hover:before {
+    left: 100%;
+  }
+  
+  .registerButton.disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
+  
+  .registerButton.disabled:before {
+    display: none;
+  }
+  
+  .holographicDetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 26, 46, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+    z-index: 10;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  .detailsContent {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .detailsContent h4 {
+    color: #00e5ff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .detailsContent ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .detailsContent li {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .detailsContent li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #00e5ff;
+    border-radius: 50%;
+  }
+  
+  .arPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #00e5ff;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .arIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 229, 255, 0.3);
+    position: relative;
+  }
+  
+  .arIcon:before {
+    content: 'AR';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: #00e5ff;
+  }
+  
+  .aiAssistant {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  
+  .aiAvatar {
+    width: 60px;
+    height: 60px;
+    background: url('/ai-assistant.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.7);
+    margin-right: -20px;
+    z-index: 2;
+  }
+  
+  .aiInterface {
+    background: rgba(16, 23, 41, 0.9);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px;
+  }
+  
+  .aiHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  
+  .aiHeader span {
+    color: #00e5ff;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .pulsingDot {
+    width: 8px;
+    height: 8px;
+    background: #00e5ff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.7; }
+  }
+  
+  .aiInterface p {
+    color: #b4e1ff;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .aiInput {
+    display: flex;
+    align-items: center;
+  }
+  
+  .aiInput input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .aiInput input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .aiButton {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 229, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .aiButton:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid #00e5ff;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }

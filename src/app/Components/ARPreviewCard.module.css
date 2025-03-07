@@ -1,0 +1,153 @@
+/* components/ARPreviewCard.module.css */
+.card {
+    background-color: rgba(8, 15, 40, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 252, 0.2);
+  }
+  
+  .link {
+    display: block;
+  }
+  
+  .thumbnailContainer {
+    position: relative;
+    height: 12rem;
+    overflow: hidden;
+  }
+  
+  .thumbnail {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to right, rgba(0, 255, 252, 0.2), rgba(149, 0, 255, 0.2));
+  }
+  
+  .overlayCenter {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconCircle {
+    background-color: rgba(2, 6, 23, 0.7);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vrIcon {
+    color: #00fffc;
+    font-size: 1.5rem;
+  }
+  
+  .blueprintOverlay {
+    position: absolute;
+    inset: 0;
+    background-size: 600px;
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .blueprintVisible {
+    opacity: 0.3;
+  }
+  
+  .content {
+    padding: 1.25rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+    transition: color 300ms;
+  }
+  
+  .titleHovered {
+    color: #00fffc;
+  }
+  
+  .instructor {
+    color: #9ca3af;
+    margin-bottom: 1rem;
+  }
+  
+  .dateContainer {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+  }
+  
+  .dateIcon {
+    margin-right: 0.5rem;
+    color: #00fffc;
+  }
+  
+  .registrationContainer {
+    margin-bottom: 1rem;
+  }
+  
+  .registrationHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .registrationLabel {
+    color: #9ca3af;
+  }
+  
+  .usersIcon {
+    display: inline;
+    margin-right: 0.5rem;
+    color: #00fffc;
+  }
+  
+  .registrationCount {
+    color: white;
+  }
+  
+  .progressBarContainer {
+    height: 0.5rem;
+    background-color: #0f172a;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-image: linear-gradient(to right, #00fffc, #9500ff);
+  }
+  
+  .joinLink {
+    color: #00fffc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .joinText {
+    margin-right: 0.5rem;
+  }
+  
+  .arrow {
+    transform: translateX(0);
+    transition: transform 300ms;
+  }
+  
+  .arrowHovered {
+    transform: translateX(0.5rem);
+  }
