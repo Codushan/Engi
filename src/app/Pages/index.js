@@ -53,7 +53,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1>Building <span>Tomorrow's</span> World</h1>
-            <p>Join the world's leading engineers and architects at the most innovative civil engineering festival of 2025</p>
+            <p>Join the world's leading engineers and architects at the most innovative civil engineering festival of 2025 year</p>
             <CountdownTimer targetDate="2025-06-15T09:00:00" />
           </motion.div>
         </section>
