@@ -2,8 +2,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const Workshop = () => {
   const [workshops, setWorkshops] = useState([]);

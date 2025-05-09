@@ -2,8 +2,8 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './page.module.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const Speakers = () => {
   const [activeCategoryFilter, setActiveCategoryFilter] = useState('all');
