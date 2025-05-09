@@ -3,21 +3,21 @@ import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import CountdownTimer from '@/app/components/CountdownTimer';
-import AIAssistant from '@/app/components/AIAssistant';
+import CountdownTimer from '../components/CountdownTimer';
+import AIAssistant from '../components/AIAssistant';
 import LeaderboardWidget from '../components/LeaderboardWidget';
 import ARPreviewCard from '../components/ARPreviewCard';
 import HolographicCity from '../components/HolographicCity';
 import NetworkingMap from '../components/NetworkingMap';
 import HighlightCard from '../components/HighlightCard';
 import StatCard from '../components/StatCard';
-import Navbar from '@/app/components/Navbar'
-import Footer from '@/app/components/Footer'
-import styles from './index.module.css';
+import Footer from '../components/Footer';
 import { FaTrophy, FaCalendarAlt, FaChalkboardTeacher, FaHome, FaUsers, FaMapMarkedAlt, FaMicrophone, FaTools, FaUserFriends } from 'react-icons/fa';
 
 
 // Import styles
+import styles from './index.module.css';
+import Navbar from '../components/Navbar';
 
 const text = "Our Highlights";
 const animatedText = text.split("").map((char, index) => (
