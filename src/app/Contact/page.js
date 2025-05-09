@@ -2,9 +2,8 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './page.module.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
+import Navbar from '@/app/components/Navbar'
+import Footer from '@/app/components/Footer'
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
