@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AIAssistant from '../components/AIAssistant';
 import styles from './schedule.module.css';
