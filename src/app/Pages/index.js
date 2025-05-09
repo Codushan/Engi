@@ -64,10 +64,10 @@ export default function Home() {
         </section>
       </main>
       
-      {/* <AIAssistant isOpen={isAssistantOpen} onClose={() => setIsAssistantOpen(false)} /> */}
-      {/* <button className={styles.aiButton} onClick={() => setIsAssistantOpen(true)}>AI</button> */}
+      <AIAssistant isOpen={isAssistantOpen} onClose={() => setIsAssistantOpen(false)} />
+      <button className={styles.aiButton} onClick={() => setIsAssistantOpen(true)}>AI</button>
       <HolographicCity/>
-      {/* <ARPreviewCard/> */}
+      <ARPreviewCard/>
       <LeaderboardWidget/>
       <NetworkingMap/>
       <HighlightCard/>

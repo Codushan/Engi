@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { FaTrophy, FaCalendarAlt, FaChalkboardTeacher, FaHome, FaUsers, FaMapMarkedAlt, FaMicrophone, FaTools, FaUserFriends } from 'react-icons/fa';
 
 const Competition = () => {
   const [competitions, setCompetitions] = useState([]);
